@@ -32,6 +32,7 @@ else:
     print("Please continue to drive safely")
 """
 # 7
+"""
 day = int(input("What day is it? "))
 month = int(input("What month is it? "))
 if (day == 1 ) and (month == 1):
@@ -44,4 +45,21 @@ elif (day == 4 ) and (month == 5):
      print("It's Star Wars Day")
 else:
     print("Mid day icl")
+"""
+# 8
+age = int(input("What is your age? "))
+price = float(4)
+
+if age <= 4:
+     print(f"You pay nothing!")
+elif age <= 16 and age > 4:
+    teen_price = price // 2
+    print (f"You pay £{teen_price}")
+elif age >= 65:
+    olie_price = price * 2/3
+    print (f"You pay £{olie_price}")
+else:
+    print (f"You pay £{price}")
+
+
 
