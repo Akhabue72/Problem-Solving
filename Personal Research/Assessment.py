@@ -1,3 +1,9 @@
+#For asessments:
+#40-49% screenshots of you testing the code
+# 50-59% Comments in the code saying what it does
+# 60-69% Justification
+# 70% Provide an alternative approach
+
 def delivery_fee(distance,order_value):
     print("How far away are you?")
     distance = int(input())
