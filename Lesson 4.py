@@ -36,5 +36,5 @@ def timestable(multiple, answer):
         multiple += 1
         print(f"{multiple} x {answer} = {multiple * answer}")
     return multiple
-# timestable(multiple = 1, answer = 1)
+timestable(multiple = 1, answer = 1)
 #3
