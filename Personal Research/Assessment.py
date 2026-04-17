@@ -102,4 +102,15 @@ def task6():
                 print("*", end="")
         print()
 
-task6()
+def ass2_xmark():
+    answer = int(input("Please input a number between 1 and 20: "))
+    result = ""
+    for i in range(20):
+        if i == answer - 1:
+            result += "X"
+        else:
+            result += "-"
+    print(result)
+
+def ass3_menu():
+    print("It's a menu!")
