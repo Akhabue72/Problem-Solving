@@ -3,7 +3,7 @@
 # 50-59% Comments in the code saying what it does
 # 60-69% Justification
 # 70% Provide an alternative approach
-
+from Character import player
 def idkwhattheseareicl():
     def task1():
         ast = 1
@@ -82,11 +82,15 @@ def idkwhattheseareicl():
                     print("*", end="")
             print()
 
-def ass1_delivery():
+def ass1():
     def delivery_fee(distance,order_value):
+
+        #questions
         print("How far away are you?")
         distance = int(input())
         print(f"You are {distance} miles away")
+
+        #distance calc
         match distance, order_value:
             case (distance, _) if distance <= 10:
                 order_value = 0
@@ -98,15 +102,17 @@ def ass1_delivery():
                 order_value = 20
         print (f"The delivery fee is £{order_value}")
         return order_value
-
+#main
     print ("How much was the product cost?")
     cost = int(input())
     print(f"You paid £{cost}.")
     print(f"The total cost is £{cost + delivery_fee(distance = 0, order_value = 0)}")
 
-def ass2_xmark():
+def ass2():
+    #input
     answer = int(input("Please input a number between 1 and 20: "))
     result = ""
+    #Calc
     for i in range(20):
         if i == answer - 1:
             result += "X"
@@ -114,39 +120,45 @@ def ass2_xmark():
             result += "-"
     print(result)
 
-def ass3_menu():
+def ass3():
+# Rectangle area calc
     def rectangle():
-        length = float(input("Please enter the length of the rectangle: "))
-        width = float(input("Please enter the width of the rectangle: "))
-        area = length * width
-        print(f"The area of the rectangle is: {area} cm squared")
+        length = float(input("Please enter the length of the rectangle: ")) #input 1
+        width = float(input("Please enter the width of the rectangle: ")) #input 2
+        area = length * width #calc
+        print(f"The area of the rectangle is: {area} cm squared") #display
         return area
 
+#Circle area calc
     def circle():
         import math
-        radius = float(input("Enter the radius of the circle: "))
-        area = math.pi * radius ** 2
-        print(f"The area of the circle is: {area:.2f} square units")
+        radius = float(input("Enter the radius of the circle: ")) #input
+        area = math.pi * radius ** 2 #calc
+        print(f"The area of the circle is: {area:.2f} cm squared") #display
         return area
 
+#Multi table
     def table():
-        number = int(input("Enter a number to show its multiplication table: "))
+        number = int(input("Enter a number to show its multiplication table: ")) #input
         print(f"Multiplication Table for {number}:")
-        for i in range(1, 13):
+        for i in range(1, 13):#calc
             result = number * i
-            print(f"{number} x {i:2} = {result:3}")
+            print(f"{number} x {i:2} = {result:3}")#display
 
+#Mean calc
     def mean():
         print("Enter three numbers:")
-        num1 = float(input("First number: "))
-        num2 = float(input("Second number: "))
-        num3 = float(input("Third number: "))
-        mean = (num1 + num2 + num3) / 3
-        print(f"The numbers are: {num1}, {num2}, {num3}")
-        print(f"The mean (average) is: {mean:.2f}")
+        num1 = float(input("First number: "))#input
+        num2 = float(input("Second number: "))#input
+        num3 = float(input("Third number: "))#input
+        mean = (num1 + num2 + num3) / 3 #calc
+        print(f"The numbers are: {num1}, {num2}, {num3}")#display]
+        print(f"The mean is: {mean:.2f}")#display
 
+#Main menu
     def menu():
         while True:
+            #The menu that the user sees
             print("""
             Please enter the letter which corresponds with your choice:
             a - Calculate the area of a rectangle
@@ -155,6 +167,7 @@ def ass3_menu():
             d – Find the mean of three numbers """)
             answer = input("Please input the letter which corresponds with your choice: ").lower()
 
+            #The different answers
             if answer == "a":
                 rectangle()
             elif answer == "b":
@@ -163,13 +176,14 @@ def ass3_menu():
                 table()
             elif answer == "d":
                 mean()
+            #Error check
             else:
                 print("Input is invalid, please try again.")
                 continue
 
     menu()
 
-def ass4_coordinate():
+def ass4():
     # X coordinate
     x = int(input("Enter X coordinate between 1 and 10: "))
 
@@ -186,7 +200,7 @@ def ass4_coordinate():
                 print("-", end=" ")
         print()
 
-def ass5_menu():
+def ass5():
     numbers = []
 
     print("=-" * 50)
@@ -242,7 +256,7 @@ def ass5_menu():
             else:
                 mean = sum(numbers) / len(numbers)
                 print(f"Mean (average) of all numbers: {mean:.2f}")
-
+        # error check
         else:
             print("Invalid! Please enter A, B, C, or D.")
             continue
@@ -252,8 +266,7 @@ def ass5_menu():
         if again != "yes" and again != "y":
             print("Goodbye!")
             break
-
-def ass6_sort():
+def ass6():
     #Quite frankly, this task really confuses me, but i'll get there
     # Array
     numbers = [6, 5, 3, 1, 2]
@@ -264,4 +277,18 @@ def ass6_sort():
         print(f"Current element value: {current_value} | Element 0: {first_value}")
 
 def ass7():
-    print()
+    p1 = player()
+    p2 = player()
+    print(f"Player 1 is {p1.name}")
+    p1.describe()
+    player.Heal(self=p1)
+    p1.describe()
+    p2.name = "Lucy"
+    p2.health = 60
+    p2.attack = 130
+    p2.defence = 65
+    print(f"Player 2 is {p2.name}")
+    p2.describe()
+    player.Damage(self=p2)
+    p2.describe()
+ass5()

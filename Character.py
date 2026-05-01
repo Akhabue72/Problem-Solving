@@ -1,4 +1,5 @@
 class player:
+#character stats
     def __init__(self):
         self.name = "Ollie"
         self.health = 75
@@ -10,14 +11,15 @@ class player:
 
     def describe(self):
         print(f"Character: <{self.name}> | Health: {self.health}/100 | Attack: <{self.attack}> | Defence: <{self.defence}>")
-
+#heal
     def Heal(self):
         if self.health >= 100:
             print(f"{self.name} is already full health!")
         else:
+            print(f"{self.name} has been healed by 5")
             self.health += 5
-
-    def takeDamage(self):
+#damage
+    def Damage(self):
         print(f"{self.name} has taken damage!")
         self.health -= 10
 
